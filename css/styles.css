@@ -1,0 +1,72 @@
+/* Palette écolo simple */
+:root {
+  --green: #2e9b5e;
+  --green-dark: #207344;
+  --grey-light: #f5f7f6;
+  --grey: #707070;
+  --white: #ffffff;
+}
+
+/* Reset rapide */
+    *{  
+    margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;
+    }
+
+    body {
+    background:var(--grey-light);color:var(--grey);
+    }
+
+    header {
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1rem 2rem;background:var(--white);box-shadow:0 2px 4px rgba(0,0,0,.05);
+    }
+
+
+    .logo {
+    color:var(--green-dark);font-size:1.8rem;
+    }
+
+    nav ul{
+    list-style:none;display:flex;gap:1.5rem;
+    }
+
+    nav a{
+    text-decoration:none;color:var(--grey);font-weight:600;
+    }
+
+    .hero {
+    text-align:center;padding:4rem 1rem;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60') center/cover;color:var(--white);
+    }
+
+    .hero h2{
+    font-size:2rem;margin-bottom:2rem;text-shadow:0 2px 6px rgba(0,0,0,.4);
+    }
+
+.search-form{
+    display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;
+    }
+
+.search-form input, .search-form button{
+    padding:.7rem 1rem;border:none;border-radius:4px;font-size:1rem;
+    }
+
+.search-form input{
+    flex:1 1 180px;
+    }
+
+.search-form button{
+    background:var(--green);color:var(--white);cursor:pointer;transition:.2s;
+    }
+
+.search-form button:hover{
+    background:var(--green-dark);
+    }
+
+
+footer{
+    padding:1rem;text-align:center;font-size:.9rem;background:var(--white);margin-top:4rem;
+    }
+
+footer a{
+    color:var(--green-dark);text-decoration:none;margin-left:.5rem;
+    }
