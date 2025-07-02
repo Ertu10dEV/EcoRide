@@ -70,3 +70,52 @@ footer{
 footer a{
     color:var(--green-dark);text-decoration:none;margin-left:.5rem;
     }
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.ride-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* <- important */
+  gap: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px; /* largeur fixe pour homogénéité */
+  text-align: center;
+}
+
+
+.driver-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ride-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; /* prend toute la place dispo */
+}
+
+
+.ride-details button:hover {
+  background: var(--green-dark);
+}
