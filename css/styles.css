@@ -119,3 +119,64 @@ footer a{
 .ride-details button:hover {
   background: var(--green-dark);
 }
+
+.conducteur {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.photo-profil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-conducteur {
+  display: flex;
+  flex-direction: column;
+}
+
+.nom {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.note {
+  color: #2e9b5e;
+  font-size: 1rem;
+}
+
+.infos-trajet {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.btn-reserver {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #2e9b5e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-reserver:hover {
+  background-color: #207344;
+}
