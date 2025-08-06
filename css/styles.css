@@ -7,7 +7,7 @@
   --white: #ffffff;
 }
 
-/* Reset rapide */
+/* Reset de base */
     *{  
     margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;
     }
@@ -16,6 +16,7 @@
     background:var(--grey-light);color:var(--grey);
     }
 
+    /* EN-TÊTE */
     header {
     display:flex;justify-content:space-between;align-items:center;
     padding:1rem 2rem;background:var(--white);box-shadow:0 2px 4px rgba(0,0,0,.05);
@@ -35,6 +36,8 @@
     nav a{
     text-decoration:none;color:var(--grey);font-weight:600;
     }
+
+    /* SECTION D'ACCUEIL (HERO) */
 
     .hero {
     background-image: url("/img/--image\ d\'accueil\ voiture\ eco.jpg");
@@ -59,6 +62,8 @@
     .hero h2{
     font-size:2rem;margin-bottom:2rem;text-shadow:0 2px 6px rgba(0,0,0,.4);
     }
+
+/* FORMULAIRE DE RECHERCHE */
 
 .search-form{
     display:flex;flex-wrap:wrap;gap:8rem;justify-content:center;
@@ -87,6 +92,8 @@
     background-color: #f0f0f0;
     }
 
+/* EFFET DEGRADE BAS DE L'IMAGE */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -97,6 +104,7 @@
   background: linear-gradient(to bottom, transparent, white);
 }
 
+/* PIED DE PAGE */
 
 footer{
     padding:1rem;text-align:center;font-size:.9rem;background:var(--white);margin-top:4rem;
@@ -105,6 +113,8 @@ footer{
 footer a{
     color:var(--green-dark);text-decoration:none;margin-left:.5rem;
     }
+
+/* LISTE DES TRAJETS ( résultats ) */
 
 .results-container {
   display: flex;
@@ -155,6 +165,8 @@ footer a{
   background: var(--green-dark);
 }
 
+/* DETAIL CONDUCTEUR */
+
 .conducteur {
   display: flex;
   align-items: center;
@@ -190,6 +202,8 @@ footer a{
   font-size: 1rem;
 }
 
+/* DETAIL TRAJET */
+
 .infos-trajet {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -215,6 +229,8 @@ footer a{
 .btn-reserver:hover {
   background-color: #207344;
 }
+
+/* PAGE CONNEXION */
 
 .connexion {
   max-width: 400px;
@@ -287,6 +303,8 @@ footer a{
   transition: background-color 0.2s ease-in-out;
 }
 
+/* PAGE ESPACE UTILISATEUR */
+
 .espace-utilisateur {
   max-width: 800px;
   margin: 3rem auto;
@@ -341,5 +359,55 @@ footer a{
 }
 
 .modifier:hover {
+  background-color: #207344;
+}
+
+/* PAGE AJOUT TRAJET */
+
+.form-ajout {
+  max-width: 600px;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-ajout h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2e9b5e;
+}
+
+.form-ajout form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-ajout label {
+  font-weight: bold;
+}
+
+.form-ajout input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-ajout button {
+  margin-bottom: 1.5rem;
+  background-color: #2e9b5e;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-ajout button:hover {
   background-color: #207344;
 }
