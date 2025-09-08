@@ -40,7 +40,7 @@
     /* SECTION D'ACCUEIL (HERO) */
 
     .hero {
-    background-image: url("/img/--image\ d\'accueil\ voiture\ eco.jpg");
+    background-image: url("../img/--image-accueil.voiture.eco.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -410,4 +410,30 @@ footer a{
 
 .form-ajout button:hover {
   background-color: #207344;
+}
+
+/* Ajustements spécifiques au formulaire d'inscription */
+.connexion .form-ajout {
+  display: flex;
+  flex-direction: column; /* Les inputs les uns en dessous des autres */
+  gap: 0.8rem;
+  max-width: 350px;       /* Pour éviter que ça parte trop large */
+  margin: 0 auto;         /* Centrer */
+}
+
+.connexion .form-ajout input,
+.connexion .form-ajout button {
+  width: 100%;
+}
+
+.connexion .aide-mdp {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.connexion .message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
