@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRide - Inscription</title>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body>
     <header>
         <h1 class="logo">EcoRide</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="covoiturage.html">Covoiturage</a></li>
-                <li><a href="login.html">Connexion</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="covoiturage.php">Covoiturage</a></li>
+                <li><a href="login.php">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -21,20 +21,20 @@
     <main class="connexion">
         <h1>Créer un compte</h1>
 
-        <form id="signupForm" class="form-ajout" novalidate>
+        <form action="../back-end/inscription.php" method="POST" class="form-ajout">
             <label for="pseudo">Pseudo</label>
-            <input id="pseudo" type="text" required/>
+            <input id="pseudo" name="name" type="text" required/>
 
             <label for="email">Email</label>
-            <input id="email" type="email" required/>
+            <input id="email" name="email" type="email" required/>
 
             <label for="password">Mot de passe</label>
-            <input id="password" type="password" required minlength="8"/>
+            <input id="password" name="password" type="password" required minlength="8"/>
 
             <p class="aide-mdp">Règle : 8 caractères minimum.</p>
 
-            <button type="submit" class="modifier">S'inscrire</button>
-            <p class="petit">Déjà inscrit ? <a href="login.html">Se connecter</a></p>
+            <button type="submit" name="submit" class="modifier">S'inscrire</button>
+            <p class="petit">Déjà inscrit ? <a href="login.php">Se connecter</a></p>
 
             <div id="message" class="message"></div>
         </form>
@@ -44,7 +44,7 @@
         <p>© 2025 EcoRide – contact@ecoride.fr</p>
     </footer>
 
-    <script src="js/signup.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>

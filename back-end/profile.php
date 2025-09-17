@@ -24,7 +24,8 @@ $user = $_SESSION['user'];
 
         <p>Email : <?= htmlspecialchars($user['email']) ?></p>
         <p>Rôle : <?= htmlspecialchars($user['role']) ?></p>
-        <a href="logout.php">Se déconnecter</a>
+        <a href="php/logout.php">Se déconnecter</a>
+
 
 </body>
 

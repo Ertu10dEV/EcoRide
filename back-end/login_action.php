@@ -1,6 +1,6 @@
 <?php
 // login.php
-require 'db.php';
+require '../includes/db.php';
 session_start();
 
 // Sécuriser la session
@@ -32,8 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'email' => $user['email'],
                 'role' => $user['role']
             ];
-            header("Location: profile.php"); // ou espace utilisateur
+            
+            header("Location: http://localhost/EcoRide/front-end/espace-utilisateur.php");
             exit;
+
         } else {
             $error = "Email ou mot de passe incorrect.";
         }

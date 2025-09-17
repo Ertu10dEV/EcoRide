@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRide - Covoiturage responable</title>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
-        <img src="img/--logo_ECORIDE.png" alt="EcoRide logo" class="logo">
+        <img src="../img/--logo_ECORIDE.png" alt="EcoRide logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#">Accueil</a></li>
@@ -34,7 +34,7 @@
         <a href="#">Mentions légales</a>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
 
