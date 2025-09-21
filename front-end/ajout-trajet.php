@@ -12,29 +12,25 @@
         <section class="form-ajout">
             <h2>Proposer un trajet</h2>
 
-            <form action="#" method="post">
+    <form action="../back-end/create_trajet.php" method="post">
+        <label for="depart">Ville de départ</label>
+        <input type="text" id="depart" name="depart" required>
 
-                <label for="depart">Ville de départ</label>
-                <input type="text" id="depart" name="depart" required>
+        <label for="arrive">Ville d'arrivée</label>
+        <input type="text" id="arrive" name="arrive" required>
 
-                <label for="arrivee">Ville d'arrivée</label>
-                <input type="text" id="arrivee" name="arrivee" required>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
 
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" required>
+        <label for="places">Places disponibles</label>
+        <input type="number" id="places" name="places" min="1" max="8" required>
 
-                <label for="heure">Heure de départ</label>
-                <input type="time" id="heure" name="heure" required>
+        <label for="prix">Prix (en €)</label>
+        <input type="number" id="prix" name="prix" step="0.5" required>
 
-                <label for="places">Places disponibles</label>
-                <input type="number" id="places" name="places" min="1" max="8" required>
+        <button type="submit">Publier le trajet</button>
+    </form>
 
-                <label for="prix">Prix (en € )</label>
-                <input type="number" id="prix" name="prix" step="0.5" required>
-
-                <button type="submit">Publier le trajet</button>
-
-            </form>
         </section>            
     </main>
     

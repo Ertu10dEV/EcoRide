@@ -1,8 +1,8 @@
 <?php
 $DB_HOST = 'localhost';
-$DB_NAME = 'ecoride';   // ton nom de base
-$DB_USER = 'root';      // utilisateur par défaut XAMPP
-$DB_PASS = '';          // mot de passe vide sur XAMPP
+$DB_NAME = 'ecoride';
+$DB_USER = 'root';
+$DB_PASS = '';
 
 try {
     $pdo = new PDO(
@@ -15,6 +15,8 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("❌ Erreur de connexion : " . $e->getMessage());
+    // Message neutre pour l'utilisateur
+    echo "Erreur : impossible de se connecter à la base de données.";
+    exit; // on quitte proprement
 }
 ?>

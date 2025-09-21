@@ -54,8 +54,8 @@ $trajetsDisponibles = $stmt->fetchAll();
         <section class="espace-utilisateur">
             <!-- Profil -->
             <div class="profil">
-                <img src="<?= htmlspecialchars($user['photo'] ?? 'https://randomuser.me/api/portraits/women/18.jpg') ?>" 
-                     alt="photo utilisateur" class="photo-utilisateur">
+                <img src="<?= !empty($user['photo']) ? htmlspecialchars($user['photo']) : 'https://randomuser.me/api/portraits/women/18.jpg' ?>" 
+                alt="photo utilisateur" class="photo-utilisateur">
                 <div class="infos-profil">
                     <h2>Bonjour, <?= htmlspecialchars($user['name']) ?></h2>
                     <p>Email : <?= htmlspecialchars($user['email']) ?></p>

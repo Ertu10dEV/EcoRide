@@ -1,14 +1,7 @@
 -- ==========================================
--- Création de la base
--- ==========================================
---DROP DATABASE IF EXISTS ecoride;
---CREATE DATABASE ecoride CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
---USE ecoride;
-
--- ==========================================
 -- Table utilisateur
 -- ==========================================
-CREATE TABLE utilisateur (
+CREATE TABLE IF NOT EXISTS utilisateur (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
@@ -23,7 +16,7 @@ CREATE TABLE utilisateur (
 -- ==========================================
 -- Table trajets
 -- ==========================================
-CREATE TABLE trajets (
+CREATE TABLE IF NOT EXISTS trajets (
     id INT AUTO_INCREMENT PRIMARY KEY,
     depart VARCHAR(100) NOT NULL,
     arrive VARCHAR(100) NOT NULL,
@@ -38,7 +31,7 @@ CREATE TABLE trajets (
 -- ==========================================
 -- Table reservation
 -- ==========================================
-CREATE TABLE reservation (
+CREATE TABLE IF NOT EXISTS reservation (
     id INT AUTO_INCREMENT PRIMARY KEY,
     utilisateur_id INT NOT NULL,
     trajet_id INT NOT NULL,
@@ -50,8 +43,6 @@ CREATE TABLE reservation (
 -- ==========================================
 -- Données de test
 -- ==========================================
-
--- Utilisateurs (mots de passe à adapter selon ton inscription)
 INSERT INTO utilisateur (name, email, password, credit, role)
 VALUES
 ('Ertu', 'ertu@ecoride.fr', '1234', 50, 'membre'),
@@ -59,7 +50,6 @@ VALUES
 ('Naim67', 'naim67@ecoride.fr', 'Azerty1234', 30, 'chauffeur'),
 ('Izelgic', 'izelgic@ecoride.fr', '$2y$10$hQH9E0fakeHashForDemo', 20, 'membre');
 
--- Trajets (attribués à MarineEco et Naim67)
 INSERT INTO trajets (depart, arrive, date, utilisateur_id, prix, places_disponibles, statut)
 VALUES
 ('Paris', 'Strasbourg', '2025-09-15 14:30:00', 2, 20, 3, 'disponible'),

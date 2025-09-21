@@ -15,7 +15,7 @@
         <form action="../back-end/login_action.php" method="POST">
           <div class="champ">  
             <label for="email">Adresse e-mail :</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required autofocus>
           </div> 
 
           <div class="champ">

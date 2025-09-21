@@ -90,6 +90,8 @@
 
 .search-form button:hover{
     background-color: #f0f0f0;
+    transform: scale(1.03);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
 
 /* EFFET DEGRADE BAS DE L'IMAGE */
@@ -338,7 +340,7 @@ footer a{
   margin-bottom: 3rem;
 }
 
-.reservations ul {
+.reservation ul {
   padding-left: 1.2rem;
   list-style-type: disc;
 }
@@ -437,3 +439,21 @@ footer a{
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+input:focus, button:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+
+/* ===== Media Queries pour petits écrans ===== */
+@media(max-width: 600px) {
+    .search-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .results-container, .form-ajout {
+        padding: 1rem;
+    }
+}
+
