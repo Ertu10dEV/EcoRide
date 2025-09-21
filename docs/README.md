@@ -1,86 +1,9 @@
-# EcoRide - Plateforme de covoiturage éco-responsable
+#  EcoRide - Plateforme de covoiturage éco-responsable
 
-EcoRide est une application web (front-end) qui permet de rechercher un trajet de covoiturage et de consulter un page de détail.
-Objectif : poposer une solution plus "verte" et "économique" avec une interface simple.
+EcoRide est une application web PHP/MySQL qui permet de rechercher, proposer et réserver des trajets de covoiturage. L’objectif est de proposer une solution plus verte et plus économique, avec une interface simple et responsive. Le projet comprend une page d’accueil avec recherche par ville et date, des résultats affichant les trajets disponibles, une page de détails présentant le conducteur, le véhicule, le prix et la possibilité de réserver, ainsi qu’un espace utilisateur où l’on peut gérer son profil, ses crédits et ses trajets. Les conducteurs peuvent publier des trajets et les passagers réserver directement en ligne.
 
-## Fonctionnalités (version front)
--Page d'accueil avec des recherche (départ, arrivée, date)
--Page résultats avec cartes de trajets
--Page détails d'un covoiturage (conducteur, véhicule, prix, règles, bouton "Réserver")
--Page connexion (maquette fonctionnelle, sans vrai back)
--Page espace utilisateur (profil/infos - affichage statique pour l'instant)
--Page ajout de trajet (formulaire - affichage statique également)
--Design simple, responsive de base (mobile/desktop)
+Le projet est développé en HTML5, CSS3 et JavaScript pour la partie front-end, et en PHP avec PDO pour la partie back-end. Les données sont stockées dans une base MySQL comprenant trois tables principales : utilisateur, trajets et réservation. Les mots de passe sont sécurisés avec `password_hash()` et les interactions avec la base se font via des requêtes préparées afin d’éviter les injections SQL. L’application a été d’abord testée en local avec XAMPP puis déployée en ligne sur Hostinger, où elle est accessible à l’adresse suivante : [https://ecoride.d-evweb.fr].
 
-Pas de base de donées ni de vraie API pour le moment. Le back sera ajouté plus tard (PHP + MySQL).
+L’arborescence du projet est organisée avec des dossiers distincts pour le front-end, le back-end, les includes (connexion PDO et fonctions partagées), la base de données, les fichiers CSS, JS et images. Le fichier `ecoride_hostinger.sql` permet de recréer la base complète avec des données de test. Pour lancer le projet en local, il suffit de cloner le dépôt, placer le dossier dans `htdocs`, importer le script SQL dans phpMyAdmin, configurer les identifiants dans `includes/db.php`, puis accéder à l’index via [http://localhost/EcoRide/front-end/index.php](http://localhost/EcoRide/front-end/index.php).
 
-Arborescence du projet 
-
-EcoRide/
-├─ index.html # Accueil + recherche
-├─ covoiturage.html # Résultats
-├─ details.html # Détail d'un trajet
-├─ login.html # Connexion
-├─ profil.html # Espace utilisateur
-├─ ajout-trajet.html # Formulaire ajout
-├─ css/
-│ └─ styles.css # Styles globaux
-├─ js/
-│ └─ app.js # (placeholder)
-└─ img/
-├─ logo.png # Logo EcoRide
-└─ hero.jpg # Image d'accueil (Pixabay)
-
-# Tech utilisées
--*HTML5 / CSS3 / JavaScript*
--Pas de framework CSS (pas de Bootstrap)
--Editeur : *VsCode*
--Versionning : *Git & Github*
-
-# Lancer le projet en local
-Pas besoin d'installer quoi que ce soit :
-1. Télécharge ou clone le dépôt
-2. Ouvre 'index.html' dans ton avigateur
-
-Option sympa (facultatif) : utiliser l'extention *Live Server* de VsCode.
-
-# Déploiement (Front) - GitHub Pages
-1. Pousse ton code sur GitHub (branche 'main')
-2. Sur GitHub: **Settings** -> **Pages** 
-3. Section "Build and deployment" :
-    -Source : **Deploy from a branch**
-    -Branch : **main** / **root**
-    -**SAVE**
-4. Attendre 1-2 minutes, ton site sera dispo sur : 
-'https://<ton-pseudo>.github.io/<nom-du-repo>/'
-
-# Sécurité (ce qui est prévu)
-Côté front (déjà pris en compte) :
-    - Champs de formulaire typés ('type="email"', 'type="date"'...)
-    -Attributs HTML ('required' , 'min' , etc..)
-    -Messages d'erreur côté client (à compléter)
-
-Côté back (à faire plus tard) :
-    - Validation/sanitation serveur (PHP)
-    - Mots de passe hashés (bcrypt)
-    - Requêtes SQL avec *PDO + requêtes préparées*
-    - Jetons CSRF pour formulaires sensibles
-
-
-# Roadmap (prochaine US)
-- US7 : Création de compte + règles mot de passe + crédits de départ
-- US8 : Espace utilisateur (vraie persistance)
-- US9 : Saisie de voyage (enregistrement)
-- US10 : Historique de covoiturages
-- US11 : Démarrer/Arrêter un covoiturage
-- US12/US13 : Espace employé / admin
-
-# Crédits 
--Photo d'accueil : **PIXABAY** (libre de droits)
--Avatars : **RANDOMUSER.ME**
--Aide ponctuelle: **CHATGPT** (idées et relectures)
-
-
-# Contact
-Projet pédagogique - ECF (TP Graduate Développeur web fullstack )
-Auteur : *VURAL Ertugrul* - *vural.ertu@outlook.fr*
+Parmi les améliorations futures envisagées figurent la mise en place d’une messagerie entre utilisateurs, un suivi en temps réel des trajets, un historique complet des réservations, un espace administrateur pour la modération et des améliorations graphiques plus poussées. Ce projet est un travail pédagogique réalisé dans le cadre de l’ECF du TP Graduate Développeur Web Fullstack. Auteur : Vural Ertugrul (Ertu) – vural.ertu@outlook.fr – [https://d-evweb.fr].
